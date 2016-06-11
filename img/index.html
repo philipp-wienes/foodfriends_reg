@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>foodfriends</title>
+      <meta name="description" content="register for foodfriends" />
+      <meta name="keywords" content="" />
+      <meta name="author" content="foodfriends" />
+      <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
+      <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+	  
+<link rel="stylesheet" href="dist/switchery.css" />
+<script src="dist/switchery.js"></script>
+
+      <script src="http://code.jquery.com/jquery-latest.min.js"
+         type="text/javascript"></script>
+      <!-- Custom styles for this template -->
+      <link href="css/main.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-latest.min.js"
+         type="text/javascript"></script>
+
+      <script src="js/modernizr.custom.js"></script>
+   </head>
+   <body >
+      <div class="container">
+         <div class="side_bar">
+            <img id="image"  src="img/ff01.png"></img>
+         </div>
+         <div class="fs-form-wrap" id="fs-form-wrap">
+            <div class="sidebar"></div>
+            <div class="fs-title">
+               <img style="padding-bottom: -10px; width:200px;"src="img/logo.png"></img>
+            </div>
+            <form action="send.php" method="post" id="myform" class="fs-form fs-form-full" autocomplete="off">
+               <ol class="fs-fields">
+                  <li id="first">
+                     <label class="fs-field-label fs-anim-upper" for="q2">
+                        <div id=serialize> </div>
+                        Verrätst du uns deinen Namen?
+                     </label>
+                     <input class="fs-anim-lower" id="Name" name="Name" type="text" 
+					 placeholder="Vorname" 
+					 />
+					   <input class="fs-anim-lower" id="Name" name="Name" type="text" 
+					 placeholder="Nachname" 
+					 /><label style="font-weight: 400;" class="label fs-anim-upper" >
+                        <div id=serialize> </div>
+                       Geschlecht
+                     </label>
+					 <div class="check_container fs-anim-upper">
+					<input type="checkbox" class="js-switch "  /> </div>
+					
+					<div style="color: black;margin-left: 10px; margin-top: 0px; font-size: 14px; color: grey; font-weight: 400;" class="fs-anim-upper check-change js-check-change-field">Bitte auswählen</div>
+                  </li>
+                  <li id="second" >
+                     <label class="fs-field-label fs-anim-upper" for="q3" >
+                        <div id=serialize> </div>
+                        Wie können wir dich erreichen?
+                     </label>
+					 <!-- Important: Input elements have to use the fs-anim-lower class, else they are not clickable!-->
+                     <input class="fs-anim-lower" id="Mail" name="Mail" type="email" placeholder="dean@road.us" 
+					 />
+                  </li>
+                  <li id="third" data-input-trigger>
+                     <label class="fs-field-label fs-anim-upper" for="Picture" >
+                        <div id=serialize> </div>
+                        Lade ein Foto von dir hoch
+                     </label>
+					 <input class="fs-anim-lower" type="file" id="img_link" name="img_link" accept="image/*">
+						
+                 <!-- FOTO HOCHLADE FUNKTION WIP -->
+				 
+                  </li>
+                  <li id="fourth" data-input-trigger>
+                     <label class="fs-field-label fs-anim-upper" for="Motto" >Was ist dein Motto?</label>
+                     <textarea class="fs-anim-lower" id="Motto" name="Motto" placeholder="Lebe jeden Tag als wäre es dein letzter"></textarea>
+                  </li>
+                  <li id="fifth" data-input-trigger>
+                     <label class="fs-anim-lower fs-field-label fs-anim-upper" for="Profession" >
+                        <div id=serialize> </div>
+                        Was tust du so im Leben?
+                     </label>
+                     <select style="width:100%;" id="Profession" name="Profession[]" class="professions fs-anim-lower" multiple="multiple" placeholder="#berufe" 
+					 >
+                     
+                     </select>
+                  </li>
+                  <li id="six" data-input-trigger>
+                     <label class="fs-anim-lower fs-field-label fs-anim-upper" for="Language" >
+                        <div id=serialize> </div>
+                        Was sprichst du für Sprachen?
+                     </label>
+                     <select id="Language" name="Language[]" style="width:100%;" class="languages" multiple="multiple" placeholder="#Sprache" 
+					 >
+                        <option value="Deutsch">Deutsch</option>
+                        <option value="Zeichensprache">Zeichensprache</option>
+                        <option value="Gebärdensprache">Gebärdensprache</option>
+                        <option value="Englisch">Englisch</option>
+                        <option value="Spanisch">Spanisch</option>
+                        <option value="Chinesisch">Chinesisch</option>
+                     </select>
+                  </li>
+                  <li id="seven" data-input-trigger>
+                     <label class="fs-anim-lower fs-field-label fs-anim-upper" for="Food" >
+                        <div id=serialize> </div>
+                        Was isst du am liebsten?
+                     </label>
+                     <select id="Food" name="Food[]" style="width:100%;" class="food" multiple="multiple" placeholder="#food" 
+					 >
+                        <option value="Chinesisch">Chinesisch</option>
+                        <option value="Deutsch">Deutsch</option>
+                        <option value="Italienisch">Italienisch</option>
+                        <option value="Asiatisch">Asiatisch</option>
+                     </select>
+                  </li>
+                  <li id="eight">
+                     <label class="fs-anim-lower fs-field-label fs-anim-upper" for="Hobby">
+                        <div id=serialize> </div>
+                        Was interessiert dich?
+                     </label>
+                     <select id="Hobby" name="Hobby[]" style="width:100%;" class="hobby" multiple="multiple" placeholder="#food" 
+					 >
+                      
+                     </select>
+                  </li>
+                  <li id="nine">
+                     <label class="fs-anim-lower fs-field-label fs-anim-upper" for="City" >
+                        <div id=serialize> </div>
+                        Wo hälst du dich auf?
+                     </label>
+                     <select id="City" name="City[]" style="width:100%;" class="city" multiple="multiple" placeholder="#citys" 
+					 >
+                        <option value="Bremen">#Bremen</option>
+                        <option value="Palma">#Palma</option>
+                        <option value="Berlin">#Berlin</option>
+                        <option value="Hannover">#Hannover</option>
+                     </select>
+                  </li>
+               </ol>
+               <!-- /fs-fields -->
+               <button class="fs-submit" type="submit">Send answers</button>
+            </form>
+            <!-- /fs-form -->
+         </div>
+         <!-- /fs-form-wrap -->
+         <!-- Related demos -->
+      </div>
+      <!-- /container -->
+      <script src="js/classie.js"></script>
+      <script src="js/selectFx.js"></script>
+      <script src="js/fullscreenForm.js"></script>
+      <script>
+         (function() {
+         	var formWrap = document.getElementById( 'fs-form-wrap' );
+         
+         	[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+         		new SelectFx( el, {
+         			stickyPlaceholder: false,
+         			onChange: function(val){
+         				document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+         			}
+         		});
+         	} );
+         
+         	new FForm( formWrap, {
+         		onReview : function() {
+         			classie.add( document.body, 'overview' ); // for demo purposes only
+         		}
+         	} );
+         })();
+      </script>
+      <script>
+         document.body.style.backgroundColor = "#27ae60 "; 
+                    
+         $("#third :input").click(function()  {              
+         
+         
+            test();
+         
+         });
+         
+         
+                    
+         $(document).click(function()  {
+          
+         
+         
+            test();
+          blub();
+          
+         });
+                    
+         $(document).keyup(function(event){
+          if(event.keyCode == 13){
+             test();
+               blub();
+          }
+         });  
+                    
+                                 
+         function test(){
+		
+          
+           if ($("#first").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#27ae60 ";
+         document.body.style.backgroundColor = "#27ae60 ";
+         
+         var image = document.getElementById('image');
+            image.src = "img/ff01.png";
+         
+         }
+         
+          
+         if ($("#second").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#f1c510";
+         var image = document.getElementById('image');
+            image.src = "img/ff04.png";
+         
+         
+         }
+         
+         if ($("#third").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#f59e16";
+         
+         var image = document.getElementById('image');
+            image.src = "img/ff02.png";
+         }    
+         if ($("#fourth").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#c23d30";
+         var image = document.getElementById('image');
+            image.src = "img/ff05.png";
+         }    
+              if ($("#fifth").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#27ae60";
+         
+         var image = document.getElementById('image');
+            image.src = "img/ff03.png";
+         }  
+              if ($("#six").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#f1c510";
+         var image = document.getElementById('image');
+            image.src = "img/ff07.png";
+         }  
+         if ($("#seven").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#f59e16";
+         var image = document.getElementById('image');
+            image.src = "img/ff06.png";
+         }  
+         if ($("#eight").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#c23d30";
+         var image = document.getElementById('image');
+            image.src = "img/ff09.png";
+         }  
+         if ($("#nine").hasClass("fs-current")) {
+         document.body.style.backgroundColor = "#27ae60";
+         var image = document.getElementById('image');
+            image.src = "img/ff08.png";
+         }  
+		
+		     
+         }
+         
+         
+              
+      </script>
+
+
+      <script>
+         function blub(){
+             
+                    
+         var x = document.getElementById("q1").value;
+         
+         document.getElementById("serialize").innerHTML = "Hi " + x +",";
+         }
+         
+      </script>
+	  
+	  <script>
+	 
+		 
+		 
+	  </script>
+      <link href="dist/css/select2.css" rel="stylesheet" />
+      <script src="dist/js/select2.js"></script>
+      <script type="text/javascript">
+
+ $("#Profession").select2({
+   tags: true,
+             placeholder: "Wähle deinen Beruf",
+           tokenSeparators: [',', ' '],
+  ajax: {
+    url: "ajax/professions.php",
+    dataType: 'json',
+    data: function(params) {
+      return {
+        q: params.term, // search term
+        page: params.page
+      };
+    },
+    processResults: function(data, params) {
+      var data = $.map(data, function(obj) {
+        obj.id = obj.id;
+        obj.text = obj.tag;
+        return obj;
+      });
+      // parse the results into the format expected by Select2
+      // since we are using custom formatting functions we do not need to
+      // alter the remote JSON data, except to indicate that infinite
+      // scrolling can be used
+      params.page = params.page || 1;
+
+      return {
+        results: data,
+        pagination: {
+          more: (params.page * 30) < data.total_count
+        }
+      };
+    },
+    cache: true,
+	  tags: true
+  },
+  escapeMarkup: function(markup) {
+    return markup;
+  }, // let our custom formatter work
+
+
+});
+
+
+
+ $("#Hobby").select2({
+   tags: true,
+             placeholder: "Wähle deine Sprachen",
+           tokenSeparators: [',', ' '],
+  ajax: {
+    url: "ajax/hobby.php",
+    dataType: 'json',
+    data: function(params) {
+      return {
+        q: params.term, // search term
+        page: params.page
+      };
+    },
+    processResults: function(data, params) {
+      var data = $.map(data, function(obj) {
+        obj.id = obj.id;
+        obj.text = obj.tag;
+        return obj;
+      });
+      // parse the results into the format expected by Select2
+      // since we are using custom formatting functions we do not need to
+      // alter the remote JSON data, except to indicate that infinite
+      // scrolling can be used
+      params.page = params.page || 1;
+
+      return {
+        results: data,
+        pagination: {
+          more: (params.page * 30) < data.total_count
+        }
+      };
+    },
+    cache: true,
+	  tags: true
+  },
+  escapeMarkup: function(markup) {
+    return markup;
+  }, // let our custom formatter work
+
+
+});
+
+
+
+
+         $(".languages").select2({
+           tags: true,
+             placeholder: "Wähle deine Sprachen",
+           tokenSeparators: [',', ' ']
+         })
+         $(".food").select2({
+           tags: true,
+             placeholder: "Wähle deine Lieblingsessen",
+           tokenSeparators: [',', ' ']
+         })
+     
+         $(".city").select2({
+           tags: true,
+             placeholder: "Wähle deine Stadt",
+           tokenSeparators: [',', ' ']
+         })
+		 
+         
+      </script>
+	    <!---  <script>
+$(this).on('select2:unselecting', function(e) {
+    $(this).data('unselecting1', true);
+    $(this).data('unselecting2', true);
+});
+$(this).on('select2:opening', function(e) {
+    var unselecting1 = $(this).data('unselecting1');
+    var unselecting2 = $(this).data('unselecting2');
+
+    if(unselecting1 || unselecting2) {
+
+        e.preventDefault();
+
+        if(unselecting1) {
+            $(this).data('unselecting1', false);
+        } else {
+            $(this).data('unselecting2', false);
+        }
+});
+    }
+	</script>-->
+	  <!-- adding hashtags on tag input-->
+
+
+<script>
+
+var elem = document.querySelector('.js-switch');
+var init = new Switchery(elem, { color:'#27ae60'});
+
+
+var changeCheckbox = document.querySelector('.js-switch')
+  , changeField = document.querySelector('.js-check-change-field');
+
+changeCheckbox.onchange = function() {
+  changeField.innerHTML = changeCheckbox.checked;
+  
+  if(changeCheckbox.checked == true ){
+   changeField.innerHTML = 'Weiblich';
+  }
+if(changeCheckbox.checked == false ){
+     changeField.innerHTML = 'Männlich';
+  }
+};
+
+</script>
+   </body>
+</html>
